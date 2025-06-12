@@ -12,7 +12,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen font-redhat bg-[#F4F4F5] flex flex-col items-center justify-center gap-6 px-4">
+    <div className="min-h-screen font-redhat flex flex-col items-center justify-center gap-6 px-4">
       <div className="flex justify-center mb-2">
         <div className="">
           <img className="w-[122px] h-[24px]" src="../src/assets/logo.png" alt="Logo" />
@@ -23,13 +23,13 @@ export default function App() {
           <h2 className="text-xl leading-[100%] font-semibold text-[#09090B] ">
             Let’s uncover what your document is saying.
           </h2>
-          <p className="text-sm text-[#71717A] font-normal mt-[6px]">
+          <p className="text-sm text-text-secondary font-normal mt-[6px]">
             Upload a document and ask anything — DocuSense will find the answers.
           </p>
         </div>
 
         <div className="text-left w-[95%] lg:w-[80%] mx-auto">
-          <label className="text-[#18181B] text-sm font-medium leading-[100%] mb-1">
+          <label className=" text-sm font-medium leading-[100%] mb-1">
             Upload Your Document
           </label>
           <div className="flex gap-2 my-2">
@@ -38,19 +38,19 @@ export default function App() {
                 type="text"
                 value={fileName}
                 readOnly
-                className="w-full px-3 py-2 border border-[#E4E4E7] text-[#71717A] font-normal rounded-md text-sm pr-8"
+                className="w-full px-3 py-2 border border-[#E4E4E7] text-text-secondary font-normal rounded-md text-sm pr-8"
               />
               {fileName !== 'No file selected yet' && (
                 <button
                   type="button"
                   onClick={() => setFileName('No file selected yet')}
-                  className="absolute top-1/2 -translate-y-1/2 right-2 text-[#18181B] text-sm"
+                  className="absolute top-1/2 -translate-y-1/2 right-2 text-sm"
                 >
                   <img className="cursor-pointer" src="../src/assets/closeicon.svg" alt="Logo" />
                 </button>
               )}
             </div>
-            <label className="flex items-center gap-2 px-4 py-[10px] bg-[#F4F4F5] text-[#18181B] rounded-md text-sm font-medium cursor-pointer">
+            <label className="flex items-center gap-2 px-4 py-[10px] bg-bg-primary  rounded-md text-sm font-medium cursor-pointer">
               <img  src="../src/assets/upload.svg" alt="Upload a file"/>Upload a file
               <input
                 type="file"
@@ -60,7 +60,7 @@ export default function App() {
               />
             </label>
           </div>
-          <p className="text-xs leading-[100%] text-[#71717A]">
+          <p className="text-xs leading-[100%] text-text-secondary">
             Supported formats: PDF, DOCX, TXT
           </p>
         </div>

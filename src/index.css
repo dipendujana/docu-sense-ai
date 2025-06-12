@@ -2,23 +2,31 @@
 
 @import "tailwindcss";
 
-@theme {
+@theme inline {
   --font-redhat: 'Red Hat Display', sans-serif;
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --bg-primary: var(--bg-primary);
+  
 }
 
 :root {
-  /* font-family: 'Red Hat Display', sans-serif; */
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* ✅ Custom text color */
+  --text-primary: #18181B;
+  --text-secondary: #71717A;
+  --bg-primary: #F4F4F5;
+  --bg-secondary: #FAFAFA;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color:var(--text-primary);
+  background-color: var(--bg-primary);
 }
 
 

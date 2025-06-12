@@ -197,11 +197,11 @@ export default function Chat() {
   };
 
   return (
-    <div className="min-h-screen font-redhat bg-[#F4F4F5] px-4 py-6 flex flex-col items-center">
+    <div className="min-h-screen font-redhat px-4 py-6 flex flex-col items-center">
       {/* Header */}
       <div className="w-full max-w-4xl flex justify-between items-center mb-6">
         <img src="../src/assets/logo.png" className="h-6" alt="Logo" />
-        <label className="flex items-center gap-2 text-sm font-medium px-4 py-2 bg-[#18181B] text-[#FAFAFA] border rounded-md">
+        <label className="flex items-center gap-2 text-sm font-medium px-4 py-2 bg-text-primary text-[#FAFAFA] border rounded-md">
           <img src="../src/assets/upload_light.svg" alt="Upload" />
           Upload a new doc
           <input type="file" accept=".pdf,.docx,.txt" className="hidden" />
@@ -210,11 +210,11 @@ export default function Chat() {
 
       {/* Chat Container */}
       <div className="bg-white min-h-[662px] w-full max-w-4xl rounded-lg shadow-sm p-6 flex justify-between flex-col gap-4">
-        <div className="flex flex-col gap-4">
-          {/* Document Title */}
-          <h2 className="text-xl border-b border-[#F4F4F5] leading-[100%] font-semibold text-[#09090B] pb-3">
-            Document in Focus: Luna’s Resume
-          </h2>
+        {/* Document Title */}
+        <h2 className="text-xl border-b border-bg-primary leading-[100%] font-semibold text-[#09090B] pb-3">
+          Document in Focus: Luna’s Resume
+        </h2>
+        <div className="flex flex-col gap-4 min-h-[396px]">
 
           {messages.map((msg) => (
             <div
@@ -222,12 +222,12 @@ export default function Chat() {
               className={`group text-sm rounded-lg px-4 py-2  ${
                 msg.sender === 'user'
                   ? 'self-end text-white'
-                  : 'text-[#18181B] bg-white'
+                  : 'bg-white'
               }`}
             >
               <p
                 className={`${
-                  msg.sender === 'user' ? 'bg-[#71717A] max-w-lg' : ''
+                  msg.sender === 'user' ? 'bg-text-secondary max-w-lg' : ''
                 } rounded-lg px-4 py-2 whitespace-pre-line`}
               >
                 {msg.text}
@@ -274,7 +274,7 @@ export default function Chat() {
               onChange={(e) => setQuestion(e.target.value)}
               placeholder="Ask something..."
               rows={1}
-              className="flex-1 h-24 resize-none px-2 py-1 text-sm outline-none text-[#18181B] bg-transparent"
+              className="flex-1 h-24 resize-none px-2 py-1 text-sm outline-none bg-transparent"
             />
             <button
               className={`p-2 rounded-md transition-opacity ${
