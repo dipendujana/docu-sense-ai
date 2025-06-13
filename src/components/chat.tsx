@@ -211,7 +211,7 @@ export default function Chat() {
       {/* Chat Container */}
       <div className="bg-white min-h-[662px] w-full max-w-4xl rounded-lg shadow-sm p-6 flex justify-between flex-col gap-4">
         {/* Document Title */}
-        <h2 className="text-xl border-b border-bg-primary leading-[100%] font-semibold text-[#09090B] pb-3">
+        <h2 className="text-xl border-b border-[#F4F4F5] leading-[100%] font-semibold text-[#09090B] pb-3">
           Document in Focus: Luna’s Resume
         </h2>
         <div className="flex flex-col gap-4 min-h-[396px]">
@@ -228,7 +228,7 @@ export default function Chat() {
               <p
                 className={`${
                   msg.sender === 'user' ? 'bg-text-secondary max-w-lg' : ''
-                } rounded-lg px-4 py-2 whitespace-pre-line`}
+                } rounded-lg px-4 py-2 whitespace-pre-line rounded-tr-none`}
               >
                 {msg.text}
               </p>
